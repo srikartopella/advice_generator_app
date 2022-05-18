@@ -29,13 +29,6 @@ function getAdvice() {
     .catch((error) => console.log(error));
 }
 
-function animateBtn() {
-  button.classList.add("animate");
-  setTimeout(function () {
-    button.classList.remove("animate");
-  }, 150);
-}
-
 window.addEventListener("DOMContentLoaded", () => {
   showLoader();
   getAdvice();
@@ -45,7 +38,6 @@ window.addEventListener("DOMContentLoaded", () => {
 button.addEventListener("click", () => {
   button.setAttribute("disabled", "disabled");
   showLoader();
-  animateBtn();
   getAdvice();
   updateCounter();
   setTimeout(() => {
